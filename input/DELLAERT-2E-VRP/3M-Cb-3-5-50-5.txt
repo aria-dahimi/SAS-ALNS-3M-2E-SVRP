@@ -1,0 +1,85 @@
+StringID     DepotID      x            y            demand       ReadyTime    DueDate      ServiceTime
+D1           0            -8           34           0            0            1000         0
+D2           0            -30          -4           0            0            1000         0
+D3           0            25           -21          0            0            1000         0
+P1           0            8            23           0            0            1000         0
+P2           0            -2           22           0            0            1000         0
+P3           0            -20          1            0            0            1000         0
+P4           0            -13          -17          0            0            1000         0
+P5           0            12           -19          0            0            1000         0
+S1           0            8            23           0            0            1000         10
+S2           0            -2           22           0            0            1000         10
+S3           0            -20          1            0            0            1000         10
+S4           0            -13          -17          0            0            1000         10
+S5           0            12           -19          0            0            1000         10
+C1           D2           2            -22          20           39           59           10
+C2           D1           -2           1            20           29           49           10
+C3           D1           -3           -7           10           196          216          10
+C4           D3           1            -18          10           220          240          10
+C5           D3           2            -1           20           156          176          10
+C6           D1           -4           10           20           67           87           10
+C7           D2           5            1            10           181          201          10
+C8           D3           24           8            20           90           110          10
+C9           D2           21           1            10           154          174          10
+C10          D1           -12          -24          10           132          152          10
+C11          D2           11           26           10           248          268          10
+C12          D1           26           -11          10           91           111          10
+C13          D1           -2           -26          10           166          186          10
+C14          D2           5            -4           10           197          217          10
+C15          D3           5            1            10           78           98           10
+C16          D1           9            -1           10           87           107          10
+C17          D1           24           -11          10           136          156          10
+C18          D3           4            -10          20           74           94           10
+C19          D2           -15          -13          10           236          256          10
+C20          D2           13           -18          20           255          275          10
+C21          D3           -11          -8           10           45           65           10
+C22          D2           8            -6           10           122          142          10
+C23          D3           3            28           20           235          255          10
+C24          D2           -13          9            10           107          127          10
+C25          D1           2            7            20           138          158          10
+C26          D2           -14          1            10           24           44           10
+C27          D3           -1           -17          10           209          229          10
+C28          D1           4            -1           20           158          178          10
+C29          D3           0            -4           10           189          209          10
+C30          D3           25           -9           10           221          241          10
+C31          D1           -8           -20          20           166          186          10
+C32          D2           -16          2            20           230          250          10
+C33          D1           14           21           10           202          222          10
+C34          D2           0            0            10           211          231          10
+C35          D2           -15          -2           10           223          243          10
+C36          D3           -6           -18          20           154          174          10
+C37          D1           3            8            20           160          180          10
+C38          D1           18           20           10           218          238          10
+C39          D1           0            -13          20           106          126          10
+C40          D2           -17          18           10           239          259          10
+C41          D2           21           -20          10           249          269          10
+C42          D1           -20          13           10           211          231          10
+C43          D1           16           21           20           97           117          10
+C44          D3           -5           2            20           57           77           10
+C45          D1           -14          -5           20           123          143          10
+C46          D3           10           0            10           138          158          10
+C47          D1           16           -7           20           58           78           10
+C48          D1           3            5            20           103          123          10
+C49          D2           21           21           10           87           107          10
+C50          D3           1            11           10           143          163          10
+
+Problem Variant                             : DELLAERT-2E-VRP
+Distance Metric                             : RAW_EUCLIDEAN
+Distance Divisor                            : 1.0
+Customer Locations as Transfer Points       : false
+
+First Echelon Vehicle number per depot      : 50
+First Echelon Vehicle Capacity (kg)         : 200
+First Echelon Vehicle Velocity (km/h)       : 60
+First Echelon Vehicle Fixed Cost            : 50
+First Echelon Vehicle Fixed Cost Basis      : PER_TOUR
+First Echelon Vehicle Variable Cost (€/h)   : 0
+First Echelon Vehicle Fuel Cost (€/km)      : 1.0
+
+Second Echelon Vehicle number per parking   : 50
+Second Echelon Vehicle Capacity (kg)        : 50
+Second Echelon Vehicle Velocity (km/h)      : 60
+Second Echelon Vehicle Fixed Cost           : 25
+Second Echelon Vehicle Fixed Cost Basis     : PER_TOUR
+Second Echelon Vehicle Variable Cost (€/h)  : 0
+Second Echelon Vehicle Fuel Cost (€/km)     : 1.0

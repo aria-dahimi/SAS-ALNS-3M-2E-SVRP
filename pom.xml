@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.sasalns</groupId>
+    <artifactId>sas-alns</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>SAS-ALNS for 3M-2E-SVRP</name>
+    <description>SAS-ALNS research implementation for stochastic synchronized multi-depot, multi-commodity two-echelon vehicle routing with mobile satellites.</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <commons-math3.version>3.6.1</commons-math3.version>
+        <gurobi.version>9.5.1</gurobi.version>
+        <junit.jupiter.version>5.11.4</junit.jupiter.version>
+        <maven.surefire.version>3.5.2</maven.surefire.version>
+        <maven.failsafe.version>3.5.2</maven.failsafe.version>
+        <!-- Gurobi is installed separately. GUROBI_HOME points to its installation root. -->
+        <gurobi.jar>${env.GUROBI_HOME}/lib/gurobi.jar</gurobi.jar>
+    </properties>
+
+    <dependencies>
+        <!-- Probability distributions used by the stochastic model. -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>${commons-math3.version}</version>
+        </dependency>
+
+        <!-- Unit and regression tests. -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <!-- Uses the local Gurobi installation when GUROBI_HOME is set. -->
+        <profile>
+            <id>gurobi-local</id>
+            <activation>
+                <property>
+                    <name>env.GUROBI_HOME</name>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>com.gurobi</groupId>
+                    <artifactId>gurobi</artifactId>
+                    <version>${gurobi.version}</version>
+                    <scope>system</scope>
+                    <systemPath>${gurobi.jar}</systemPath>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <!-- Slower end-to-end tests. Run with: mvn verify -Pintegration-tests -->
+        <profile>
+            <id>integration-tests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>${maven.failsafe.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <mainClass>app.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

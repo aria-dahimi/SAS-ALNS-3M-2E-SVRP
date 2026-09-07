@@ -1,0 +1,80 @@
+StringID     DepotID      x            y            demand       ReadyTime    DueDate      ServiceTime
+D1           0            3            36           0            0            1000         0
+D2           0            -33          -8           0            0            1000         0
+P1           0            -11          21           0            0            1000         0
+P2           0            -13          -20          0            0            1000         0
+P3           0            15           -17          0            0            1000         0
+S1           0            -11          21           0            0            1000         10
+S2           0            -13          -20          0            0            1000         10
+S3           0            15           -17          0            0            1000         10
+C1           D1           -13          -7           10           178          198          10
+C2           D2           -6           -9           20           190          210          10
+C3           D1           -25          3            10           72           92           10
+C4           D2           1            0            10           40           60           10
+C5           D1           5            -14          20           152          172          10
+C6           D2           21           -4           10           191          211          10
+C7           D1           -5           18           10           223          243          10
+C8           D2           8            3            20           116          136          10
+C9           D1           -3           10           20           247          267          10
+C10          D1           -5           -3           20           64           84           10
+C11          D1           7            15           20           219          239          10
+C12          D2           -12          20           10           255          275          10
+C13          D1           0            4            20           255          275          10
+C14          D1           -1           16           10           181          201          10
+C15          D1           7            -25          10           100          120          10
+C16          D2           -21          2            20           240          260          10
+C17          D1           -1           0            20           171          191          10
+C18          D2           -11          -10          10           50           70           10
+C19          D2           0            0            20           77           97           10
+C20          D1           -22          10           20           105          125          10
+C21          D2           9            -2           20           246          266          10
+C22          D2           6            -20          10           44           64           10
+C23          D1           -9           0            20           51           71           10
+C24          D2           3            -1           10           74           94           10
+C25          D1           -4           -6           10           109          129          10
+C26          D1           9            15           20           143          163          10
+C27          D2           -2           -3           10           123          143          10
+C28          D2           -29          8            20           152          172          10
+C29          D1           22           18           10           47           67           10
+C30          D1           13           0            20           255          275          10
+C31          D1           19           -5           20           144          164          10
+C32          D2           -3           0            20           90           110          10
+C33          D1           7            12           10           157          177          10
+C34          D1           3            6            10           188          208          10
+C35          D1           29           -1           10           253          273          10
+C36          D2           -1           -6           10           207          227          10
+C37          D2           -10          -15          10           225          245          10
+C38          D2           14           -12          20           237          257          10
+C39          D2           24           12           20           222          242          10
+C40          D1           0            10           10           183          203          10
+C41          D1           21           19           20           94           114          10
+C42          D2           0            24           10           229          249          10
+C43          D2           26           12           20           254          274          10
+C44          D2           -9           -8           10           153          173          10
+C45          D2           -20          9            10           63           83           10
+C46          D2           16           7            20           140          160          10
+C47          D2           9            3            20           128          148          10
+C48          D1           -6           12           20           253          273          10
+C49          D1           -23          -4           20           83           103          10
+C50          D1           -5           0            10           131          151          10
+
+Problem Variant                             : DELLAERT-2E-VRP
+Distance Metric                             : RAW_EUCLIDEAN
+Distance Divisor                            : 1.0
+Customer Locations as Transfer Points       : false
+
+First Echelon Vehicle number per depot      : 50
+First Echelon Vehicle Capacity (kg)         : 200
+First Echelon Vehicle Velocity (km/h)       : 60
+First Echelon Vehicle Fixed Cost            : 50
+First Echelon Vehicle Fixed Cost Basis      : PER_TOUR
+First Echelon Vehicle Variable Cost (€/h)   : 0
+First Echelon Vehicle Fuel Cost (€/km)      : 1.0
+
+Second Echelon Vehicle number per parking   : 50
+Second Echelon Vehicle Capacity (kg)        : 50
+Second Echelon Vehicle Velocity (km/h)      : 60
+Second Echelon Vehicle Fixed Cost           : 25
+Second Echelon Vehicle Fixed Cost Basis     : PER_TOUR
+Second Echelon Vehicle Variable Cost (€/h)  : 0
+Second Echelon Vehicle Fuel Cost (€/km)     : 1.0

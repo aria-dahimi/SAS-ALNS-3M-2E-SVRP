@@ -1,0 +1,39 @@
+StringID     DepotID      x            y            demand       ReadyTime    DueDate      ServiceTime
+D1           0            2            33           0            0            600          0
+D2           0            -35          -18          0            0            600          0
+P1           0            20           7            0            0            600          0
+P2           0            -12          17           0            0            600          0
+P3           0            25           -1           0            0            600          0
+S1           0            21           8            0            0            600          10
+S2           0            -11          18           0            0            600          10
+S3           0            26           0            0            0            600          10
+C1           D2           0            -9           5            31           51           10
+C2           D1           -21          17           7            84           104          10
+C3           D1           -18          1            14           174          194          10
+C4           D1           -2           3            21           172          192          10
+C5           D1           -15          -23          17           157          177          10
+C6           D1           15           -8           11           93           113          10
+C7           D2           7            8            13           159          179          10
+C8           D2           7            24           19           107          127          10
+C9           D2           4            -26          12           83           103          10
+
+Problem Variant                             : 3M-2E-VRP
+Distance Metric                             : FLOOR_EUCLIDEAN_DIVISOR
+Distance Divisor                            : 6.0
+Customer Locations as Transfer Points       : true
+
+First Echelon Vehicle number per depot      : 9
+First Echelon Vehicle Capacity (kg)         : 1000
+First Echelon Vehicle Velocity (km/h)       : 10
+First Echelon Vehicle Fixed Cost            : 60
+First Echelon Vehicle Fixed Cost Basis      : PER_DAY
+First Echelon Vehicle Variable Cost (€/h)   : 15
+First Echelon Vehicle Fuel Cost (€/km)      : 0.56
+
+Second Echelon Vehicle number per parking   : 9
+Second Echelon Vehicle Capacity (kg)        : 100
+Second Echelon Vehicle Velocity (km/h)      : 15
+Second Echelon Vehicle Fixed Cost           : 20
+Second Echelon Vehicle Fixed Cost Basis     : PER_DAY
+Second Echelon Vehicle Variable Cost (€/h)  : 10
+Second Echelon Vehicle Fuel Cost (€/km)     : 0.028
